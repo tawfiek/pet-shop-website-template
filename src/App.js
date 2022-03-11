@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom'
-import ListContacts from './ListContacts'
-import CreateContact from './CreateContact'
-import * as ContactsAPI from './utils/ContactsAPI'
+import * as ContactsAPI from './utils/ContactsAPI';
 
 class App extends Component {
   state = {
@@ -32,20 +29,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Route exact path='/' render={() => (
-          <ListContacts
-            onDeleteContact={this.removeContact}
-            contacts={this.state.contacts}
-          />
-        )}/>
-        <Route path='/create' render={({ history }) => (
-          <CreateContact
-            onCreateContact={(contact) => {
-              this.createContact(contact)
-              history.push('/')
-            }}
-          />
-        )}/>
+        You updated your application again!
       </div>
     )
   }
