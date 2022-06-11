@@ -1,0 +1,26 @@
+version: 2.1
+orbs:
+  node: circleci/node@4.1.0
+  aws-cli: circleci/aws-cli@2.1.0
+jobs:
+  build:
+    docker:
+      - image: "cimg/base:stable"
+    steps:
+      - node/install:
+          install-yarn: true
+          node-version: '16.13'
+      - checkout
+      - aws-cli/setup
+      - run:
+          name: Install Application Deps
+          command: |
+            yarn
+      - run:
+          name: Build Application
+          command: |
+            yarn build
+      - run:
+          name: Deploy Application to AWS
+          command: |
+            yarn deploy

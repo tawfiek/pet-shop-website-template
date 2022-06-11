@@ -29,7 +29,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        You updated your application again!
+         Session 10 - Sat 11 June 2022
       </div>
     )
   }
