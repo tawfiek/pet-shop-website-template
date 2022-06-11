@@ -1,1 +1,1 @@
-aws s3 cp --recursive --acl public-read ./build s3://udacity-sessions-9/
+aws s3 cp --recursive  ./build s3://session-10-cirlceci/
