@@ -13,7 +13,7 @@ jobs:
       - run:
           name: Install
           command: |
-            yarn ci
+            yarn
       - run:
           name: Build
           command: |
