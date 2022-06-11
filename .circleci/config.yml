@@ -3,7 +3,7 @@ orbs:
   node: circleci/node@4.1.0
   aws-cli: circleci/aws-cli@2.1.0
 jobs:
-  build:
+  build-test-deploy:
     docker:
       - image: "cimg/base:stable"
     steps:
@@ -13,7 +13,7 @@ jobs:
       - run:
           name: Install
           command: |
-            npm install
+            npm ci
       - run:
           name: Build
           command: |
