@@ -13,13 +13,13 @@ jobs:
       - run:
           name: Install
           command: |
-            npm ci
+            yarn ci
       - run:
           name: Build
           command: |
-            npm run build
+            yarn build
       - run:
           name: Deploy
           command: |
-            npm run deploy
+            yarn deploy
 
