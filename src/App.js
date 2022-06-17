@@ -29,7 +29,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        Application has been updated !
+        Application has been update, Good luck with your next step, it was nice to teaching you all!
       </div>
     )
   }
